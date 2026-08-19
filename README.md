@@ -2,6 +2,7 @@
 
 > **행정 업무에서 반복되는 파일·폴더 작업을 작은 GUI 도구로 자동화한 개인 프로젝트 모음**
 
+**2025.07 — 현재 · 개인 · 지속 사용**  
 `Python` `Tkinter` `pandas` `pypdf` `Automation`
 
 ## Overview
@@ -13,7 +14,6 @@
 ## Tools
 
 ### 1. Folder Reorder Tool — `change.py`
-
 폴더명을 `번호_이름` 형태로 관리하는 업무에서 순번을 자동으로 정렬합니다.
 
 - 폴더 목록 자동 탐색
@@ -26,36 +26,13 @@
 - 잘못된 조작을 고려한 복구 경로
 
 ### 2. PDF Auto Splitter — `final3.py`
-
 스캔 폴더에서 PDF를 감시하고, 학생 이름·학번을 입력해 정해진 문서 단위로 자동 분할합니다.
 
-- PDF 파일 수동 추가
-- 스캔 폴더 자동 감시
-- 이름 / 학번 입력
-- 3페이지 단위 문서 분할
-- 학생별 폴더 자동 생성
-- 처리 완료 후 원본 삭제 옵션
-- 입력 누락 시 GUI에서 오류 표시
-
 ### 3. Excel ↔ Folder Matcher — `123.py`, `456.py`
-
 Excel의 학생 이름과 실제 폴더 목록을 비교해 누락 여부를 확인하는 도구입니다.
 
-- 여러 Excel 파일 선택
-- 폴더 목록 자동 수집
-- 이름 기반 매칭
-- 존재 / 미존재 결과 생성
-- 결과 Excel 저장
-- 진행률 및 로그 표시
-
 ### 4. PDF Page Replacement Tool — `sik.py`
-
 여러 PDF에서 지정한 페이지를 다른 PDF의 지정 페이지로 교체하는 도구입니다.
-
-- 다수 PDF 선택
-- 원본 / 대상 페이지 지정
-- 페이지 범위 검증
-- 결과 PDF 저장
 
 ## Why GUI?
 
@@ -63,36 +40,30 @@ Excel의 학생 이름과 실제 폴더 목록을 비교해 누락 여부를 확
 
 특히 파일을 잘못 삭제하거나 순서를 잘못 변경했을 때 작업 전체를 다시 해야 하는 상황을 피하기 위해 휴지통·복구·중복 확인 같은 기능을 함께 고려했습니다.
 
-## Repository Structure
+## Current Use
 
-현재 저장소는 업무 도구별로 단순하게 구성하고, 프로젝트 설명과 개발 기록은 `docs/`에서 관리합니다.
+**2025년 7월부터** 실제 업무에서 사용하기 위한 도구를 개발해왔으며, 현재도 업무 과정에서 필요한 기능을 추가하거나 예외를 수정하면서 **지속적으로 사용하고 있습니다.**
+
+## Repository Structure
 
 ```text
 changing_number/
 ├── README.md
 ├── docs/
 │   └── README.md
-│
-├── change.py      # Folder Reorder Tool
-├── final3.py      # PDF Auto Splitter
-├── 123.py         # Excel → Folder matcher
-├── 456.py         # Folder → Excel matcher
-├── sik.py         # PDF page replacement
-├── change.spec
-└── ...
+├── change.py
+├── final3.py
+├── 123.py
+├── 456.py
+├── sik.py
+└── change.spec
 ```
 
 개발 과정에서 생성된 오래된 PDF splitter 버전과 진단용 debug script는 정리했습니다.
 
 ## Tech Stack
 
-- Python
-- Tkinter
-- pandas
-- pypdf / PyPDF2
-- tkinterdnd2
-- openpyxl 계열 Excel 처리
-- PyInstaller
+`Python` `Tkinter` `pandas` `pypdf / PyPDF2` `tkinterdnd2` `openpyxl` `PyInstaller`
 
 ## Context
 
